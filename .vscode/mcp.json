@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "my-server": {
+      "type": "stdio",
+      "command": "./venv/Scripts/python.exe",
+      "args": [
+        "./servers/server.py"
+      ]
+    }
+  }
+}
