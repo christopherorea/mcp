@@ -1,11 +1,7 @@
 {
   "servers": {
-    "my-server": {
-      "type": "stdio",
-      "command": "./venv/Scripts/python.exe",
-      "args": [
-        "./servers/server.py"
-      ]
+    "youtube": {
+      "url": "https://mcp.composio.dev/composio/server/3e56481b-082e-4fc7-b1cd-2793bc383066/mcp"
     }
   }
 }

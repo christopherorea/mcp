@@ -9,7 +9,6 @@ import asyncio
 
 from mcp import ClientSession
 from mcp.client.streamable_http import streamablehttp_client
-
 from langchain_mcp_adapters.tools import load_mcp_tools
 from langgraph.prebuilt import create_react_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -44,7 +43,9 @@ mcp_client = None
 # Main async function: connect, load tools, create agent, run chat loop
 async def run_agent():
     global mcp_client
-    async with streamablehttp_client(url=server_url) as (read, write, _):
+    async with streamablehttp_client(
+        url=server_url,
+        ) as (read, write, _):
         async with ClientSession(read, write) as session:
             await session.initialize()
             mcp_client = type("MCPClientHolder", (), {"session": session})()
