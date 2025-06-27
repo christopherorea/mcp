@@ -6,3 +6,4 @@ langgraph
 langchain_google_genai
 google-generativeai 
 python-dotenv
+gradio[mcp]
