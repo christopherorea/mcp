@@ -22,4 +22,7 @@ demo = gr.Interface(
     description="Count how many times a letter appears in a word"
 )
 
-demo.launch(mcp_server=True)
+demo.launch(
+    mcp_server=True,
+    strict_cors=False
+)
