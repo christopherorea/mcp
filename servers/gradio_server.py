@@ -16,13 +16,14 @@ def get_programming_fact() -> str:
 
 demo = gr.Interface(
     fn=get_programming_fact,
-    inputs=["text", "text"],
-    outputs="number",
-    title="Letter Counter",
-    description="Count how many times a letter appears in a word"
+    inputs=[],
+    outputs="text",
+    title="Programming fact",
+    description="Cuenta un facto de programación"
 )
 
 demo.launch(
     mcp_server=True,
-    strict_cors=False
+    strict_cors=False,
+    share=True
 )

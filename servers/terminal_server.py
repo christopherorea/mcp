@@ -5,7 +5,7 @@ from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("terminal")
 
-DEFAULT_WORKSPACE = os.path.join(os.getcwd(), "workspace")
+DEFAULT_WORKSPACE = os.path.join( os.getcwd(), "workspace" )
 
 # define tool - llm will create code/ command and pass to this fn
 
@@ -34,4 +34,4 @@ async def run_server_command(command: str) -> str:
         return str(e)
 
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    mcp.run( transport="stdio" )

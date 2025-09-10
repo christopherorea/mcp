@@ -4,7 +4,7 @@ import random
 
 # Create an MCP server
 mcp = FastMCP(
-        "Weather Service",
+        "My Servidor MCP",
         stateless_http=True,
     )
 
@@ -12,7 +12,7 @@ mcp = FastMCP(
 @mcp.tool()
 def get_weather(location: str) -> str:
     """Get the current weather for a specified location."""
-    return f"Weather in {location}: Sunny, 72°F"
+    return f"Weather in {location}: Sunny, 30°C"
 
 
 @mcp.tool()
